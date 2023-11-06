@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="offblue">#031637</color>
+    <color name="onblue">#00B7FF</color>
+    <color name="offred">#330505</color>
+    <color name="onred">#C80000</color>
+    <color name="offyellow">#4C3F00</color>
+    <color name="onyellow">#FFD400</color>
+    <color name="offgreen">#032500</color>
+    <color name="ongreen">#2DE300</color>
+</resources>

@@ -19,7 +19,7 @@ class Confirmation : AppCompatActivity() {
         var gmail = intent.getStringExtra("gmail")
         var contrasenia = intent.getStringExtra("contrasenia")
 
-        var usuario:Usuario = Usuario(nombre, apellido, gmail, dni, contrasenia)
+        var usuario:Usuario = Usuario(nombre, apellido, dni, gmail, contrasenia)
 
         AlmacenUsuarios.aniadirPersona(usuario)
 

@@ -52,23 +52,26 @@
         android:id="@+id/txtApellido2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
         android:text="TextView"
         android:textColor="#9C27B0"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.633"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="149dp" />
+        app:layout_constraintTop_toBottomOf="@+id/txtReciente" />
 
     <TextView
         android:id="@+id/txtGMail2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="44dp"
         android:text="TextView"
         android:textColor="#9C27B0"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="223dp"
-        tools:layout_editor_absoluteY="212dp" />
+        app:layout_constraintStart_toEndOf="@+id/txtDNI2"
+        app:layout_constraintTop_toBottomOf="@+id/txtApellido2" />
 
     <TextView
         android:id="@+id/txtDNI2"
@@ -77,29 +80,31 @@
         android:text="TextView"
         android:textColor="#9C27B0"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="212dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtGMail2"
+        app:layout_constraintStart_toStartOf="@+id/txtNombre2" />
 
     <TextView
         android:id="@+id/txtNombre2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="37dp"
         android:text="TextView"
         android:textColor="#9C27B0"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="149dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtApellido2"
+        app:layout_constraintEnd_toStartOf="@+id/txtApellido2" />
 
     <TextView
         android:id="@+id/txtListado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
         android:text="Listado de personas:"
         android:textColor="#9C27B0"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/multiLine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="295dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
