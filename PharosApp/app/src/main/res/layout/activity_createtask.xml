@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edt_title"
+        android:layout_width="350dp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:hint="@string/title_label"
+        android:inputType="text"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="41dp" />
+
+    <EditText
+        android:id="@+id/edt_Date"
+        android:layout_width="159dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="219dp"
+        tools:layout_editor_absoluteY="210dp" />
+
+    <EditText
+        android:id="@+id/edm_Description"
+        android:layout_width="350dp"
+        android:layout_height="143dp"
+        android:layout_marginStart="28dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/description_label"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="279dp" />
+
+    <RadioGroup
+        android:layout_width="350dp"
+        android:layout_height="51dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="132dp" >
+
+        <RadioButton
+            android:id="@+id/rdb_exercise"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/exercise_label" />
+
+        <RadioButton
+            android:id="@+id/rdb_project"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/project_label" />
+
+        <RadioButton
+            android:id="@+id/rdb_exam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/exam_label" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txt_DateLabel"
+        android:layout_width="154dp"
+        android:layout_height="42dp"
+        android:text="@string/date_label"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="222dp" />
+
+    <SeekBar
+        android:id="@+id/skb_ProgressBar"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="521dp" />
+
+    <TextView
+        android:id="@+id/txt_ProgressBarLabel"
+        android:layout_width="350dp"
+        android:layout_height="37dp"
+        android:text="@string/progress_bar_label"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="452dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="65dp"
+        android:layout_height="54dp"
+        app:srcCompat="@drawable/cancel"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="600dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="65dp"
+        android:layout_height="54dp"
+        app:srcCompat="@drawable/add"
+        tools:layout_editor_absoluteX="266dp"
+        tools:layout_editor_absoluteY="600dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
