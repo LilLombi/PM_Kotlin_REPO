@@ -101,48 +101,57 @@
 
     <TextView
         android:id="@+id/txt_PriorityTaskTitle"
-        android:layout_width="249dp"
-        android:layout_height="33dp"
+        android:layout_width="286dp"
+        android:layout_height="40dp"
         android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="183dp" />
+        tools:layout_editor_absoluteY="193dp" />
 
     <TextView
         android:id="@+id/txt_PriorityTaskProgressLabel"
-        android:layout_width="253dp"
-        android:layout_height="31dp"
+        android:layout_width="286dp"
+        android:layout_height="40dp"
         android:text="@string/progress_bar_label"
         android:textAlignment="center"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="245dp" />
+        tools:layout_editor_absoluteY="271dp" />
 
     <ProgressBar
         android:id="@+id/pgb_PriorityTask"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="258dp"
-        android:layout_height="36dp"
+        android:layout_width="286dp"
+        android:layout_height="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="295dp" />
+        tools:layout_editor_absoluteY="322dp" />
 
     <TextView
         android:id="@+id/txt_DateDue_Label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
         android:text="@string/date_label"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="372dp" />
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="400dp" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="372dp" />
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="229dp"
+        tools:layout_editor_absoluteY="400dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

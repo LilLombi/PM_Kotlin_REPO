@@ -7,7 +7,9 @@ class Task(
     var description: String,
     var category: Category,
     var datedue: Date,
-    var progress: Int
+    var datefinished: Date,
+    var progress: Int,
+    var finished: Boolean
 ) {
 
 

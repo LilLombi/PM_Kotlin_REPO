@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             if (binding.edtEmail.text.isNotEmpty() && binding.edtUsername.text.isNotEmpty() && binding.edtPassword.text.isNotEmpty()){
                 firebaseauth.createUserWithEmailAndPassword(binding.edtEmail.text.toString(),binding.edtPassword.text.toString()).addOnCompleteListener {
                     if (it.isSuccessful){
-                        irHome(it.result?.user?.email?:"",Proveedor.BASIC)  //Esto de los interrogantes es por si está vacío el email, que enviaría una cadena vacía.
+                        irHome(it.result?.user?.email?:"", binding.edtUsername.text.toString())  //Esto de los interrogantes es por si está vacío el email, que enviaría una cadena vacía.
                     } else {
                         showAlert("Error registrando al usuario.")
                     }
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
             if (binding.edtEmail.text.isNotEmpty() && binding.edtUsername.text.isNotEmpty() && binding.edtPassword.text.isNotEmpty()){
                 firebaseauth.signInWithEmailAndPassword(binding.edtEmail.text.toString(),binding.edtPassword.text.toString()).addOnCompleteListener {
                     if (it.isSuccessful){
-                        irHome(it.result?.user?.email?:"",Proveedor.BASIC)  //Esto de los interrogantes es por si está vacío el email.
+                        irHome(it.result?.user?.email?:"", binding.edtUsername.text.toString())  //Esto de los interrogantes es por si está vacío el email.
                     } else {
                         showAlert()
                     }
@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         googleSignInClient = GoogleSignIn.getClient(this,gso)
-        binding.btGoogle.setOnClickListener {
+        binding.btnGoogleLogin.setOnClickListener {
             loginEnGoogle()
         }
     }
@@ -131,7 +131,7 @@ class MainActivity : AppCompatActivity() {
         firebaseauth.signInWithCredential(credential).addOnCompleteListener {
             if (it.isSuccessful){
                 //hacer account. y ver otras propiedades interesantes.
-                irHome(account.email.toString(),Proveedor.GOOGLE, account.displayName.toString())
+                irHome(account.email.toString(), account.displayName.toString())
             }
             else {
                 Toast.makeText(this,it.exception.toString(), Toast.LENGTH_SHORT).show()
@@ -155,11 +155,10 @@ class MainActivity : AppCompatActivity() {
 
 
     //*********************************************************************************
-    private fun irHome(email:String, provider:Proveedor, nombre:String = "Usuario"){
-        Log.e(TAG,"Valores: ${email}, ${provider}, ${nombre}")
+    private fun irHome(email:String, nombre:String){
+        Log.e(TAG,"Valores: ${email}, ${nombre}")
         val homeIntent = Intent(this, Home::class.java).apply {
             putExtra("email",email)
-            putExtra("provider",provider.name)
             putExtra("nombre",nombre)
         }
         startActivity(homeIntent)
