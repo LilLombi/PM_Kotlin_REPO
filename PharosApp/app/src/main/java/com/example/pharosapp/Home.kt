@@ -13,8 +13,9 @@ class Home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding.btnNewTask.setOnClickListener(){
-            val newTaskIntent = Intent(this, EditTask::class.java).apply {
+            val newTaskIntent = Intent(this, EditTask::class.java).apply{
             }
+            newTaskIntent.putExtra("NewTask", true)
             startActivity(newTaskIntent)
         }
     }

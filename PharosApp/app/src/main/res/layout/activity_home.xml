@@ -28,8 +28,9 @@
             android:id="@+id/txt_User"
             android:layout_width="247dp"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:text="Nombre de usuario"
-            android:textAlignment="textStart"
+            android:textAlignment="center"
             android:textSize="22sp"
             tools:layout_editor_absoluteX="264dp"
             tools:layout_editor_absoluteY="186dp" />
